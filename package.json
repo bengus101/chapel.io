@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/bengus101/chapel.io#readme",
   "dependencies": {
+    "bcrypt": "^0.8.6",
     "body-parser": "^1.15.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "express-ejs-layouts": "^2.1.0",
+    "express-session": "^1.13.0",
     "pg": "^4.5.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.21.0"
