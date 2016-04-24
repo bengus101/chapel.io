@@ -1,0 +1,27 @@
+{
+  "name": "chapel.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bengus101/chapel.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bengus101/chapel.io/issues"
+  },
+  "homepage": "https://github.com/bengus101/chapel.io#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "pg": "^4.5.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.21.0"
+  }
+}
