@@ -6,13 +6,15 @@ body {
 h1 {
 	color: #ffcc00;
 	text-align: center;
-	font-size: 700%;
+	font-size: 1000%;
 	font-family: 'Alex Brush', cursive;
 }
 
 .container {
-	outline-style: solid;
-	outline-color: green;
-	outline-width: 2px;
-	background-color: #4d004d
+	background-color: #4d004d;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 300px;
+	margin-right: 300px;
+	border-radius: 50px;
 }
