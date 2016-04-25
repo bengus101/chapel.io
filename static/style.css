@@ -18,3 +18,21 @@ h1 {
 	margin-right: 300px;
 	border-radius: 50px;
 }
+
+#confessional {
+	float: right;
+	font-family: 'Alex Brush', cursive;
+	background-color: #4d004d;
+	color: #ffcc00;
+	border-radius: 50px;
+	font-size: 450%
+}
+
+#judge {
+	float: left;
+	font-family: 'Alex Brush', cursive;
+	background-color: #4d004d;
+	color: #ffcc00;
+	border-radius: 50px;
+	font-size: 450%
+}
