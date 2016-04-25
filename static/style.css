@@ -25,7 +25,12 @@ h1 {
 	background-color: #4d004d;
 	color: #ffcc00;
 	border-radius: 50px;
+	padding: 15px;
 	font-size: 450%
+}
+
+#confessional:hover {
+	background-color: #800080
 }
 
 #judge {
@@ -34,5 +39,14 @@ h1 {
 	background-color: #4d004d;
 	color: #ffcc00;
 	border-radius: 50px;
+	padding: 15px;
 	font-size: 450%
+}
+
+#judge:hover {
+	background-color: #800080
+}
+
+.navbar {
+	background-color: grey;
 }
