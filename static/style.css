@@ -10,7 +10,7 @@ h1 {
 	font-family: 'Alex Brush', cursive;
 }
 
-.container {
+#banner {
 	background-color: #4d004d;
 	margin-top: 50px;
 	margin-bottom: 50px;
