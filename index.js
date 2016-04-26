@@ -20,6 +20,10 @@ app.get('/confession', function(req, res) {
 	res.render("confession");
 });
 
+app.get('/gallery', function(req, res) {
+	res.render('gallery');
+})
+
 var port = 3000;
 app.listen(port, function() {
 	console.log('Port ' + port + ' straight flexin');
