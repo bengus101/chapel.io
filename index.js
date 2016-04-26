@@ -28,6 +28,10 @@ app.get('/about', function(req, res) {
 	res.render('about');
 });
 
+app.get('/signup', function(req, res) {
+	res.render('signup');
+});
+
 var port = 3000;
 app.listen(port, function() {
 	console.log('Port ' + port + ' straight flexin');
