@@ -82,6 +82,9 @@ h1 {
 
 #signup {
 	text-align: center;
+	background-color: #4d004d;
+	border-radius: 50px;
+	padding: 10px;
 }
 
 #login {
