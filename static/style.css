@@ -26,7 +26,8 @@ h1 {
 	color: #ffcc00;
 	border-radius: 50px;
 	padding: 15px;
-	font-size: 450%
+	font-size: 450%;
+	margin-top: 50px;
 }
 
 #confessional:hover {
@@ -40,7 +41,8 @@ h1 {
 	color: #ffcc00;
 	border-radius: 50px;
 	padding: 15px;
-	font-size: 450%
+	font-size: 450%;
+	margin-top: 50px;
 }
 
 #judge:hover {
@@ -48,5 +50,13 @@ h1 {
 }
 
 .navbar {
-	background-color: grey;
+	background-color: #4d004d;
+}
+
+.navbar-default .navbar-nav > li > a:link {
+	color: #ffcc00;
+}
+
+.navbar-default .navbar-header > a:link {
+	color: #ffcc00;
 }
