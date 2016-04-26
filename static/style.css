@@ -60,3 +60,7 @@ h1 {
 .navbar-default .navbar-header > a:link {
 	color: #ffcc00;
 }
+
+#confession {
+	display: inline-block;
+}

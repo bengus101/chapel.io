@@ -1,6 +1,9 @@
+// external dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
 var ejsLayouts = require('express-ejs-layouts');
+
+// local dependencies
 var db = require('./models');
 
 var app = express();
@@ -11,6 +14,10 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
 	res.render('index');
+});
+
+app.get('/confession', function(req, res) {
+	res.render("confession");
 });
 
 var port = 3000;
