@@ -21,3 +21,30 @@ router.post('/signin', function(req, res) {
 		}
 	});
 });
+
+router.get('/signup', function(req, res) {
+	res.render('signup' {alerts: req.flash()});
+});
+
+router.post('/signup', function(req, res) {
+	db.user.findOrCreate({
+		where: {
+			username: req.body.username
+		},
+		defaults: {
+			password: req.body.password
+		}
+	}).spread(function(user, isNew) {
+		if (isNew) {
+    	res.redirect('/tweets');
+  	} else {
+  		req.flash('danger', 'This username already taken. Please choose a different one.')
+    	res.redirect('/auth/signup');
+  	}
+	}).catch(function(err) {
+	    req.flash('danger', err.message);
+	    res.redirect('/auth/signup')
+	});
+});
+
+module.exports = router;
