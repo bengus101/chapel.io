@@ -32,6 +32,10 @@ app.get('/signup', function(req, res) {
 	res.render('signup');
 });
 
+app.get('/login', function(req, res) {
+res.render('login');
+});
+
 var port = 3000;
 app.listen(port, function() {
 	console.log('Port ' + port + ' straight flexin');
