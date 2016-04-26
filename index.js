@@ -22,7 +22,11 @@ app.get('/confession', function(req, res) {
 
 app.get('/gallery', function(req, res) {
 	res.render('gallery');
-})
+});
+
+app.get('/about', function(req, res) {
+	res.render('about');
+});
 
 var port = 3000;
 app.listen(port, function() {
