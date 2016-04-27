@@ -20,6 +20,10 @@ app.get('/confession', function(req, res) {
 	res.render("confession");
 });
 
+app.post('/gallery', function(req, res) {
+	res.render('gallery');
+});
+
 app.get('/gallery', function(req, res) {
 	res.render('gallery');
 });
