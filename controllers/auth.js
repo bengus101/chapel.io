@@ -23,27 +23,29 @@ router.post('/signin', function(req, res) {
 });
 
 router.get('/signup', function(req, res) {
-	res.render('signup' {alerts: req.flash()});
+	res.render('signup', {alerts: req.flash()});
 });
 
 router.post('/signup', function(req, res) {
 	db.user.findOrCreate({
 		where: {
-			username: req.body.username
+			userName: req.body.username
 		},
 		defaults: {
-			password: req.body.password
+			password: req.body.password,
+			email: req.body.email
 		}
 	}).spread(function(user, isNew) {
 		if (isNew) {
-    	res.redirect('/tweets');
+    	res.redirect('/gallery');
   	} else {
   		req.flash('danger', 'This username already taken. Please choose a different one.')
-    	res.redirect('/auth/signup');
+    	res.redirect('/signup');
   	}
 	}).catch(function(err) {
+		console.log(err);
 	    req.flash('danger', err.message);
-	    res.redirect('/auth/signup')
+	    res.redirect('/signup')
 	});
 });
 
