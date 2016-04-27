@@ -14,7 +14,8 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        models.user.hasMany(models.confession);      
+        models.user.hasMany(models.confession);
+        models.user.hasMany(models.comment);      
       },
       authenticate: function(username, password, callback) {
         // find the user in the database

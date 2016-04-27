@@ -37,19 +37,23 @@ app.post('/gallery', function(req, res) {
 });
 
 app.get('/gallery', function(req, res) {
-	res.render('gallery');
+	res.render('gallery', {alerts: req.flash()});
 });
 
 app.get('/about', function(req, res) {
-	res.render('about');
+	res.render('about', {alerts: req.flash()});
 });
 
 app.get('/signup', function(req, res) {
-	res.render('signup');
+	res.render('signup', {alerts: req.flash()});
 });
 
 app.get('/login', function(req, res) {
-res.render('login');
+res.render('login', {alerts: req.flash()});
+});
+
+app.get('/', function(req, res) {
+  res.render('index', {alerts: req.flash()});
 });
 
 app.use('/confession', confessionCtrl);

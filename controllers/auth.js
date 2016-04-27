@@ -2,9 +2,10 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
-router.get('/logout', function(req, res) {
+router.post('/logout', function(req, res) {
 	req.currentUser = false;
 	res.locals.currentUser = false;
+	console.log('Logged Out!');
 	res.redirect('/');
 });
 
@@ -13,7 +14,6 @@ router.post('/login', function(req, res) {
 	var user = req.body.username;
 	var pass = req.body.password;
 	db.user.authenticate(user, pass, function(err, user) {
-		console.log(user);
 		// user successfully logged in
 		if (user) {
 			req.session.userId = user.id;
