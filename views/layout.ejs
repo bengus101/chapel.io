@@ -8,6 +8,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<div>Current User: <%= currentUser.name %></div>
 	<div class="container">
 		<% if (typeof alerts !== 'undefined') { %>
 		  <% for (key in alerts) { %>
@@ -16,7 +17,7 @@
 		    <% }); %>
 		  <% } %>
 		<% } %>
-		
+
       <% include nav %>
       <%- body %>
     </div>

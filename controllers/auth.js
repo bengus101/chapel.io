@@ -2,11 +2,17 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
-router.post('/logout', function(req, res) {
-	req.currentUser = false;
-	res.locals.currentUser = false;
-	console.log('Logged Out!');
-	res.redirect('/');
+// router.post('/logout', function(req, res) {
+// 	req.currentUser = false;
+// 	res.locals.currentUser = false;
+// 	console.log('Logged Out!');
+// 	res.redirect('/');
+// });
+
+router.get('/logout', function(req, res) {
+  req.session.userId = false;
+  console.log('Logged Out!');
+  res.redirect('/');
 });
 
 router.post('/login', function(req, res) {

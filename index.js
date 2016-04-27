@@ -24,6 +24,20 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(function(req, res, next) {
+  if (req.session.userId) {
+    db.user.findById(req.session.userId).then(function(user) {
+      req.currentUser = user;
+      res.locals.currentUser = user;
+      next();
+    });
+  } else {
+    req.currentUser = false;
+    res.locals.currentUser = false;
+    next();
+  }
+});
+
 app.get('/', function(req, res) {
 	res.render('index');
 });
