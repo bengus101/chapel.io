@@ -8,16 +8,19 @@ router.get('/logout', function(req, res) {
 	res.redirect('/');
 });
 
-router.post('/signin', function(req, res) {
+router.post('/login', function(req, res) {
 	// providing we get the username and password
 	var user = req.body.username;
 	var pass = req.body.password;
 	db.user.authenticate(user, pass, function(err, user) {
+		console.log(user);
 		// user successfully logged in
 		if (user) {
 			req.session.userId = user.id;
 			req.flash('success', 'Successfully Signed In');
 			res.redirect('/gallery');
+		} else {
+			console.log(err);
 		}
 	});
 });

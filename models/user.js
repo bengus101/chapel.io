@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       authenticate: function(username, password, callback) {
         // find the user in the database
-        this.find({where: {username: username}}).then(function(user) {
+        this.find({where: {userName: username}}).then(function(user) {
           // if there's no username with the username then raise a 'no user' error
           if (!user) callback(null, false);
           // if a user record comes back, compare the password to the hash
