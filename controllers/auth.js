@@ -11,7 +11,7 @@ var db = require('../models');
 
 router.get('/logout', function(req, res) {
   req.session.userId = false;
-  console.log('Logged Out!');
+  console.log(req.session);
   res.redirect('/');
 });
 
@@ -24,7 +24,7 @@ router.post('/login', function(req, res) {
 		if (user) {
 			req.session.userId = user.id;
 			req.flash('success', 'Successfully Signed In');
-			res.redirect('/gallery');
+			res.redirect('/');
 		} else {
 			console.log(err);
 		}

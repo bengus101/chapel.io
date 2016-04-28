@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
 		include: [db.user]
 	}).then(function(gallery) {
 		console.log(confession);
-		res.render('gallery', {gallery: confessions, alerts: req.flash()});
+		res.render('/gallery', {gallery: gallery, alerts: req.flash()});
 	});
 });
 
@@ -37,5 +37,14 @@ router.post('/', function(req, res){
 		res.send(err);
 	});
 });
+
+// router.get('/gallery', function(req, res) {
+// 	db.confession.findAll({
+// 		include: [db.user]
+// 	}).then(function(gallery) {
+// 		console.log(confession);
+// 		res.render('/gallery', {gallery: gallery, alerts: req.flash()});
+// 	});
+// });
 
 module.exports = router;

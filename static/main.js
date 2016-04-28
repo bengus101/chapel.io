@@ -1,5 +1,8 @@
 $('#log-out').click(function() {
-	
-	console.log('Logged Out');
+	$.ajax({
+		type: "GET",
+		url: '/auth/logout'
+	});
+	console.log('Clicked');
 });
 	

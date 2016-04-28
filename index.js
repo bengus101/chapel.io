@@ -38,9 +38,9 @@ app.use(function(req, res, next) {
   }
 });
 
-app.get('/', function(req, res) {
-	res.render('index');
-});
+// app.get('/', function(req, res) {
+// 	res.render('index');
+// });
 
 app.get('/confession', function(req, res) {
 	res.render("confession");
@@ -63,7 +63,7 @@ app.get('/signup', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-res.render('login', {alerts: req.flash()});
+	res.render('login', {alerts: req.flash()});
 });
 
 app.get('/', function(req, res) {
