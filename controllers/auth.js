@@ -12,6 +12,7 @@ var db = require('../models');
 router.get('/logout', function(req, res) {
   req.session.userId = false;
   console.log(req.session);
+  req.flash('success', 'Successfully Logged Out');
   res.redirect('/');
 });
 
