@@ -55,7 +55,12 @@ app.post('/gallery', function(req, res) {
 });
 
 app.get('/gallery', function(req, res) {
-	res.render('gallery', {alerts: req.flash()});
+	db.confession.findAll({
+		include: [db.user]
+	}).then(function(gallery) {
+		// console.log(confession);
+		res.render('show-all', {confession: gallery, alerts: req.flash()});
+	});
 });
 
 app.get('/about', function(req, res) {

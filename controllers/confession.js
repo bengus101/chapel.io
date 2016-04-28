@@ -38,13 +38,4 @@ router.post('/', function(req, res){
 	});
 });
 
-router.get('/gallery', function(req, res) {
-	db.confession.findAll({
-		include: [db.user]
-	}).then(function(gallery) {
-		console.log(confession);
-		res.render('/gallery', {gallery: gallery, alerts: req.flash()});
-	});
-});
-
 module.exports = router;
