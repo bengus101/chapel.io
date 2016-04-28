@@ -1,4 +1,6 @@
 <% confessions.forEach(function(conf) { %>
-	<div><a href="/confession/<%= conf.id %>"><%= conf.content %>
-	<%= conf.id %></a></div>
+	<div>
+		<a href="/confession/<%= conf.id %>"><%= conf.content %>
+		<%= conf.id %></a>
+	</div>
 <% }); %>
