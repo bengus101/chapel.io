@@ -1,4 +1,4 @@
-<% confession.forEach(function(conf) { %>
-	<div><a><%= conf.content %>
+<% confessions.forEach(function(conf) { %>
+	<div><a href="/confession/<%= conf.id %>"><%= conf.content %>
 	<%= conf.id %></a></div>
 <% }); %>

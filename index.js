@@ -43,13 +43,13 @@ app.get('/', function(req, res) {
   res.render('index', {alerts: req.flash()});
 });
 
-app.get('/', function(req, res) {
-  request('http://replygif.net/api/tags?api-key=39YAprx5Yi', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      res.send(body);
-    }
-  });
-});
+// app.get('/', function(req, res) {
+//   request('http://replygif.net/api/tags?api-key=39YAprx5Yi', function (error, response, body) {
+//     if (!error && response.statusCode == 200) {
+//       res.send(body);
+//     }
+//   });
+// });
 
 app.get('/confession', function(req, res) {
 	res.render("confession");
@@ -68,7 +68,13 @@ app.get('/gallery', function(req, res) {
 		include: [db.user]
 	}).then(function(gallery) {
 		// console.log(confession);
-		res.render('show-all', {confession: gallery, alerts: req.flash()});
+		res.render('show-all', {confessions: gallery, alerts: req.flash()});
+	});
+});
+
+app.get('/confession/:id', function(req, res) {
+	db.confession.findOne({where: {id: req.params.id}}).then(function(confession) {
+		res.render('show-confession', {confession: confession});
 	});
 });
 
