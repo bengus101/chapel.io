@@ -6,3 +6,10 @@ $('#log-out').click(function() {
 	console.log('Clicked');
 });
 	
+$('#reaction-gif').click(function() {
+	$.ajax({
+		type: 'GET',
+		url: '/comment'
+	});
+	console.log('Gif button clicked!')
+});

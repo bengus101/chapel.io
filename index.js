@@ -11,6 +11,7 @@ var request = require('request');
 var db = require('./models');
 var confessionCtrl = require('./controllers/confession');
 var authCtrl = require('./controllers/auth');
+var commentCtrl = require('./controllers/comment');
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -92,6 +93,7 @@ app.get('/login', function(req, res) {
 
 app.use('/confession', confessionCtrl);
 app.use('/auth', authCtrl);
+app.use('/comment', commentCtrl);
 
 var port = 3000;
 app.listen(port, function() {
