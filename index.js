@@ -39,9 +39,17 @@ app.use(function(req, res, next) {
   }
 });
 
-// app.get('/', function(req, res) {
-// 	res.render('index');
-// });
+app.get('/', function(req, res) {
+  res.render('index', {alerts: req.flash()});
+});
+
+app.get('/', function(req, res) {
+  request('http://replygif.net/api/tags?api-key=39YAprx5Yi', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body);
+    }
+  });
+});
 
 app.get('/confession', function(req, res) {
 	res.render("confession");
@@ -74,10 +82,6 @@ app.get('/signup', function(req, res) {
 
 app.get('/login', function(req, res) {
 	res.render('login', {alerts: req.flash()});
-});
-
-app.get('/', function(req, res) {
-  res.render('index', {alerts: req.flash()});
 });
 
 app.use('/confession', confessionCtrl);
