@@ -1,11 +1,12 @@
 <h1>The Gallery</h1>
-<form method="GET" action="/confession">
-</form>
-<% gallery.forEach(function(confession) { %>
 	<div>
-		<span class="username">
-			<%= confession.user.userName %>
+		<span class="userName">
+			<%= confession.userId %>
 		</span>
 		<%= confession.content %>
 	</div>
-<% }); %>
+
+
+<!-- <form method="GET" action="/confession">
+</form> -->
+	

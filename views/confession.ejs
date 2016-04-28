@@ -1,5 +1,9 @@
 <h1>The Confessional</h1>
-<div id="confession" contentEditable="true"></div>
+
 	<form id="confessionPost" method="POST" action="/gallery">
+	<textarea id="confession" name="confession" contentEditable="true"></textarea>
+	<strong>
+  	<%= currentUser.userName %>
+  	</strong>
 	<input type="submit" value="Submit Your Confession!">
 	</form>

@@ -47,7 +47,11 @@ app.get('/confession', function(req, res) {
 });
 
 app.post('/gallery', function(req, res) {
-	res.render('gallery');
+	db.confession.create({content: req.body.confession}).then(function(confession, err) {
+		console.log(err);
+		console.log(confession);
+		res.render('gallery', {confession: confession});
+	});
 });
 
 app.get('/gallery', function(req, res) {
