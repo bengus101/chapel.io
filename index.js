@@ -5,6 +5,7 @@ var ejsLayouts = require('express-ejs-layouts');
 var session = require('express-session');
 var router = express.Router();
 var flash = require('connect-flash');
+var request = require('request');
 
 // local dependencies
 var db = require('./models');
