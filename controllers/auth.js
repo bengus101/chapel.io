@@ -2,13 +2,6 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
-router.get('/logout', function(req, res) {
-  req.session.userId = false;
-  console.log(req.session);
-  req.flash('success', 'Successfully Logged Out');
-  res.redirect('/');
-});
-
 router.post('/login', function(req, res) {
 	// providing we get the username and password
 	var user = req.body.username;
@@ -23,6 +16,13 @@ router.post('/login', function(req, res) {
 			console.log(err);
 		}
 	});
+});
+
+router.get('/logout', function(req, res) {
+  req.session.userId = false;
+  console.log(req.session);
+  req.flash('success', 'Successfully Logged Out');
+  res.redirect('/');
 });
 
 router.get('/signup', function(req, res) {
