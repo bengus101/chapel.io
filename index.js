@@ -44,18 +44,18 @@ app.get('/', function(req, res) {
   res.render('index', {alerts: req.flash()});
 });
 
-app.get('/show-confession', function(req, res) {
-  var query = req.query.q;
+// app.get('/show-confession', function(req, res) {
+//   var query = req.query.q;
 
-  request('http://replygif.net/api/gifs?tag=angry,awkward,agreeing,shocked,disgusted,ellipsis,exclamation mark,approval&tag-operator=and&api-key=39YAprx5Yi' + query, function(err, response, body) {
-    var data = JSON.parse(body);
-    if (!err && response.statusCode === 200 && data.Search) {
-      res.render('/show-confession', {gifs: data.Search, q: query});
-    } else {
-      res.render('error');
-    }
-  });
-});
+//   request('http://replygif.net/api/gifs?tag=angry,awkward,agreeing,shocked,disgusted,ellipsis,exclamation mark,approval&tag-operator=and&api-key=39YAprx5Yi' + query, function(err, response, body) {
+//     var data = JSON.parse(body);
+//     if (!err && response.statusCode === 200 && data.Search) {
+//       res.render('/show-confession', {gifs: data.Search, q: query});
+//     } else {
+//       res.render('error');
+//     }
+//   });
+// });
 
 app.get('/confession', function(req, res) {
 	res.render("confession");

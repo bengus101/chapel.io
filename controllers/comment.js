@@ -11,12 +11,12 @@ router.get('/', function(req, res) {
 	}
 console.log('Are we here?');
 
-	db.comment.findAll({
-		include: [db.user]
-	}).then(function(gallery) {
-		console.log(confession);
-		res.render('/gallery', {gallery: gallery, alerts: req.flash()});
-	});
+// 	db.comment.findAll({
+// 		include: [db.user]
+// 	}).then(function(gallery) {
+// 		console.log(confession);
+// 		res.render('/gallery', {gallery: gallery, alerts: req.flash()});
+// 	});
 });
 
 module.exports = router;
