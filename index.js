@@ -87,6 +87,4 @@ app.use('/auth', authCtrl);
 app.use('/comment', commentCtrl);
 
 var port = 3000;
-app.listen(port, function() {
-	console.log('Port ' + port + ' straight flexin');
-});
+app.listen(process.env.PORT || 3000)
