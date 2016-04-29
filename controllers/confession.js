@@ -16,7 +16,6 @@ router.get('/', function(req, res) {
 			res.render('confession', {confession: gallery, alerts: req.flash()});
 		});	
 	}
-
 });
 
 router.get('/new', function(req, res){
@@ -25,7 +24,6 @@ router.get('/new', function(req, res){
 
 router.post('/', function(req, res){
 	console.log(req.body);
-
 	db.user.find({
 		where: { username: req.currentUser.username}
 	}).then(function(user) {
