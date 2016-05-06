@@ -36,3 +36,12 @@ $('#reaction-gif').click(function() {
 	});
 	
 });
+
+$('#toggle-about').click(function() {
+	if ($('#blurb').css('display') === 'block') {
+		$("#blurb").hide()
+	} else if ($('#blurb').css('display') === 'none') {
+		$("#blurb").show()
+	}
+});
+
