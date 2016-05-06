@@ -19,6 +19,32 @@
 
       <% include nav %>
       <%- body %>
+	    <div id="blurb">
+			<h1 id="about">About</h1>
+			<h2>What is the Chapel?</h2>
+				<p>Do you have a disgusting daily habit that you can't live without? Do you have a bizarre sexual fetish? Have you cheated on your significant other and haven't told anyone? We want to know about it!! The Chapel is a forum where you can post your misdeeds behind the anonymity of a user name you create. Additionally, users can comment on any post in the Gallery. 
+				</p>
+			<h3>How does The Chapel work?</h3>
+				<p>It is not necessary to create an account or sign in if you wish to simply browse the Gallery and read the Confessions of other users. However, if you wish to post a Confession or to post a comment on a Confession, you must sign in with your user name and password or create an account (it's free!). </p>
+			<h4 id="so" style="font-size:230%;">So, Ready To Confess Your Sins?</h4>
+		</div>
+		<div id="login">
+			<h1>Log In To Your Account</h1>
+			<form method="POST" action="/auth/login">
+				<input type="text" name="username" placeholder="User-name">
+				<input type="password" name="password" placeholder="Password">
+				<input type="submit" value="Log In">
+			</form>
+		</div>
+		<div id="signup">
+			<h1>Create A New Account</h1>
+			<form method="POST" action="/auth/signup">
+				<input type="text" name="email" placeholder="Email">
+				<input type="text" name="username" placeholder="User-name">
+				<input type="password" name="password" placeholder="Password">
+				<input type="submit" value="Sign Up">
+			</form>
+		</div>
     </div>
     <script src="/main.js"></script>
 </body>
