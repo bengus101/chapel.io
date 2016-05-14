@@ -48,3 +48,14 @@ $('#about').click(function(e) {
 	}
 });
 
+$('#log-in').click(function(e) {
+	e.preventDefault();
+	var display = $('#login').css('display');
+
+	if (display === 'block') {
+		$("#login").hide()
+	} else if (display === 'none') {
+		$("#login").show()
+	}
+});
+
