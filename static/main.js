@@ -37,14 +37,13 @@ $('#reaction-gif').click(function() {
 	
 });
 
-$("#about").click(function(){
-    $("#blurb").slideToggle(fast);
-});
+$('#about').click(function(e) {
+	e.preventDefault();
+	var display = $('#blurb').css('display');
 
-$('#about').click(function() {
-	if ($('#blurb').css('display') === 'block') {
+	if (display === 'block') {
 		$("#blurb").hide()
-	} else if ($('#blurb').css('display') === 'none') {
+	} else if (display === 'none') {
 		$("#blurb").show()
 	}
 });
