@@ -59,3 +59,14 @@ $('#log-in').click(function(e) {
 	}
 });
 
+$('#sign-up').click(function(e) {
+	e.preventDefault();
+	var display = $('#signup').css('display');
+
+	if (display === 'block') {
+		$("#signup").hide()
+	} else if (display === 'none') {
+		$("#signup").show()
+	}
+});
+
