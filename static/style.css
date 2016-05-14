@@ -18,6 +18,7 @@ h1 {
 	margin-left: 300px;
 	margin-right: 300px;
 	border-radius: 50px;
+	z-index: 1;
 }
 
 #confessional {
@@ -29,6 +30,7 @@ h1 {
 	padding: 15px;
 	font-size: 450%;
 	margin-top: 50px;
+	z-index: 1;
 }
 
 #confessional:hover {
@@ -44,6 +46,7 @@ h1 {
 	padding: 15px;
 	font-size: 450%;
 	margin-top: 50px;
+	z-index: 1;
 }
 
 #judge:hover {
@@ -81,6 +84,7 @@ h1 {
 	font-size: 110%;
 	margin-top: 200px;
 	display: none;
+	z-index: 1000;
 }
 
 #signup {
@@ -96,8 +100,8 @@ h1 {
 	background-color: #4d004d;
 	border-radius: 50px;
 	padding: 10px;
-/*	display: none;
-*/}
+	display: none;
+}
 
 #confessionPost {
 	float: right;
