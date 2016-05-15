@@ -40,7 +40,8 @@ $('#reaction-gif').click(function() {
 $('#about').click(function(e) {
 	e.preventDefault();
 	var display = $('#blurb').css('display');
-
+	$("#confessional").hide();
+	$("#judge").hide();
 	if (display === 'block') {
 		$("#blurb").hide()
 	} else if (display === 'none') {
@@ -51,7 +52,8 @@ $('#about').click(function(e) {
 $('#log-in').click(function(e) {
 	e.preventDefault();
 	var display = $('#login').css('display');
-
+	$("#confessional").hide();
+	$("#judge").hide();
 	if (display === 'block') {
 		$("#login").hide()
 	} else if (display === 'none') {
@@ -62,7 +64,8 @@ $('#log-in').click(function(e) {
 $('#sign-up').click(function(e) {
 	e.preventDefault();
 	var display = $('#signup').css('display');
-
+	$("#confessional").hide();
+	$("#judge").hide();
 	if (display === 'block') {
 		$("#signup").hide()
 	} else if (display === 'none') {
